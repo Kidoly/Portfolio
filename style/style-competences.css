@@ -1,0 +1,629 @@
+/*
+
+
+DonnÃ©es gÃ©nÃ©rales
+
+
+*/
+
+:root{
+    --primary-color: #ffffff;
+    --second-color: #C4D7ED;
+    --third-color: #ABC8E2;
+    --fourth-color: #8fabdd;
+    --fifth-color: #183152;
+    --taille: 176.3px;
+
+
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
+
+html{
+    height: -webkit-fill-available;
+    overflow: visible;
+    height: 100%;
+} 
+
+body{
+    margin: 0%;
+    height: 100%;
+    overflow: visible;
+    background-color: var(--second-color);
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+
+/*
+
+
+Barre de naviguation
+
+
+*/
+
+
+.navbar{
+    position: fixed;
+    top:0;
+    background: var(--third-color);
+    display: flex;
+    width: 100%;
+    z-index: 1;
+}
+.navbar a{
+    float: left;
+    color: var(--primary-color);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 2vw;
+}
+
+/* Navbar gauche*/
+.navbar-gauche a{
+    color: var(--second-color);
+    font-family: Courgette;
+}
+
+/* Navbar centre*/
+
+.navbar-centre{
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.navbar-centre a:hover{
+    background-color: var(--second-color);
+    color: var(--fifth-color);
+}
+
+.burger{
+    display: none;
+}
+
+.navbar-gauche{
+    align-items: center;
+    display: flex;
+}
+
+.navbar-droite{
+    align-items: center;
+    display: flex;
+}
+
+.navbar-droite a i{
+    align-items: center;
+    display: flex;
+}
+
+.dropdown-content{
+    display: none;
+}
+
+
+@media(max-width: 800px){
+    .burger{
+        display: flex;
+    }
+    .navbar{
+        height: 8%;
+    }
+    .navbar-gauche a{
+        font-size: 1em;
+    }
+    .navbar-droite a{
+        font-size: 1em;
+    }
+    .navbar-ligne{
+        display: none;
+    }
+    .dropbtn {
+        background-color: var(--third-color);
+        color: white;
+        padding: 16px;
+        border: none;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        justify-content: center;
+        transform: translateX(-35%);
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        display: block;
+        font-size: large;
+    }
+      .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+      .dropdown:hover .dropdown-content {
+        display: grid;
+        margin-top: 20%;
+    }
+      .dropdown:hover .dropbtn {
+        background-color: var(--second-color);
+    }
+}
+
+
+/* Navbar droite*/
+
+.navbar-droite{
+    background-color: var(--fifth-color);
+    color: var(--fourth-color);
+    margin-left: auto; 
+    margin-right: 0%;
+}
+
+.navbar-droite a:hover{
+    color: var(--first-color);
+}
+
+.droite{
+    display: flex;
+}
+.navbar-droite img{
+    height: 2.5vw;
+    width: 2.5vw;
+}
+
+
+
+
+
+/*
+
+
+
+
+
+
+    --html: 80;
+    --css: 70;
+    --bootstrap: 30;
+    --js: 10;
+    --php: 30;
+    --python: 80;
+    --SQL: 50;
+
+
+
+*/
+.first{
+    position: relative;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+
+.image{
+    width: 100%;
+    height: 750px; 
+    object-fit: cover;
+    background-position: center;
+}
+
+@media(max-width: 1000px){
+    .image{
+        height: 500px;
+    }
+    .competences-titre{
+        font-size: 3em;
+    }
+    h1{
+        font-size: 3em
+    }
+}
+@media(max-width: 500px){
+    .image{
+        height: 400px; 
+    }
+    h1{
+        font-size: 2em
+    }
+
+}
+
+.second{
+    padding: 5%;
+    padding-top: 5%;
+}
+
+h1{
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 4em;
+}
+
+
+.competences-titre{
+    position: absolute;
+    top: 52.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8vw;
+    background-color: black;
+    box-shadow: black 0px 0px 10px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.competence{
+    margin-top: 200px;
+    margin-bottom: 100px;
+    margin-left: 7%;
+    margin-right: 7%;
+    column-gap: 7%;
+    row-gap: 300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Google a été mon ami (c'est trop pratique :] )*/
+}
+
+.box{
+    background-color: var(--primary-color);
+    height: 550px;
+    width: 250px;
+}
+
+.box::before {
+    background-color: var(--primary-color);
+    height: var(--taille);
+    width: var(--taille);
+    content: "";
+    display: block;
+    transform: translate(21%,-50%) rotate(45deg);
+}
+
+.box::after {
+    position: relative;
+    background-color: var(--primary-color);
+    height: var(--taille);
+    width: var(--taille);
+    content: "";
+    display: block;
+    transform: translate(37px,-400px) rotate(45deg);
+    z-index:-1;
+}
+
+
+.circular-border {
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    max-height: 250px;
+}
+
+
+.circle {
+    stroke: var(--second-color);
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+}
+  
+@keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+}
+
+.cercle{
+    z-index: 0;
+    position: relative;
+    bottom: 220px;
+}
+
+.second h2{
+    text-align: center;
+    color:var(--primary-color);
+    transform: translateY(200%);
+}
+
+.rond{
+    background-color: var(--third-color);
+    height: 162px;
+    width: 162px;
+    border-radius: 50%;
+    transform:translate(44px, -191px);
+}
+.rond:hover{
+    animation: agrandissement 1s ease-in-out;
+}
+
+@keyframes agrandissement {
+    from {
+      transform:translate(44px, -191px);
+    }
+    to {
+      transform:translate(44px, -191px) scale(1.1);;
+    }
+}
+
+
+.champ {
+    position: relative;
+    background-color: var(--third-color);
+    transform: translateY(-350px);
+    text-align: center;
+    height: 100px;
+    width: 250px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+h3{
+    color: var(--primary-color);
+    padding: 5%;
+}
+
+span{
+    font-weight: bolder;
+}
+
+.img-box{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    transform: translate(25px, -300px);
+}
+
+.third{
+    height: 900px; 
+}
+
+.image-third{
+    background-image: url(../images/langues.jpg);
+    width: 100%;
+    height: 875px; 
+    object-fit: cover;
+    background-position: center;
+    display: inline-block;
+    justify-content: center;
+    padding: 5%;
+    row-gap: 2%;
+}
+
+.image-third h1 {
+    display: initial;
+    color: var(--second-color);
+    background-color: var(--primary-color);
+    height: fit-content;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 4px dashed var(--second-color);
+}
+
+h4{
+    color: var(--primary-color);
+    font-size:xx-large;
+}
+
+.langue{
+    display: grid;
+    row-gap: 2%;
+}
+
+.langue-box{
+    display: flex;
+    background-color: var(--second-color);
+    width: 100%;
+    height: 200px;   
+}
+
+
+.img-langue{
+    height: 150px;
+    width: 250px;
+    margin: 25px;
+}
+
+.titre-langue{
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.pourcentage-text {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: -webkit-fill-available;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2%;
+}
+
+.pourcentage{
+    background-color: var(--third-color);
+    height: 20px;
+    width: 80%;
+    transform: translateY(4px);
+}
+
+.espagne{
+    margin-right: 37.5px;
+    padding-left: 12.5px;
+}
+
+.pourcentage-japonais{
+    background-color: var(--fifth-color);
+    height: 20px;
+    width: 20%;
+}
+
+.pourcentage-espagnol{
+    background-color: var(--fifth-color);
+    height: 20px;
+    width: 30%;
+}
+
+.pourcentage-anglais{
+    background-color: var(--fifth-color);
+    height: 20px;
+    width: 80%;
+}
+
+
+.langue-box:hover{
+    transform:scale(1.03);
+}
+
+@media(max-width: 1000px){
+    .langue-box{
+        display: inline;
+        width: 100%;
+        height: 100%;  
+        text-align: center;   
+    }
+    .pourcentage-text {
+        display: inline;
+    }
+    .pourcentage{
+        margin-left: 10%;
+    }
+    .third{
+        height: 1000px; 
+    }
+    
+    .image-third{
+        height: 1000px; 
+    }
+}
+/*
+
+
+Footer
+
+
+*/
+
+footer {
+    text-align: center;
+    background-color: var(--second-color);
+    color: var(--primary-color);
+}
+
+footer .haut{
+    text-align: center;
+    display: inline-flex;
+    margin-top: 10px;
+    margin-bottom: 2%;
+}
+footer .categorie{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px
+}
+
+footer .icon{
+    font: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .info{
+    text-align: center;
+    width: fit-content;
+    height: auto;
+    margin: 10px
+}
+
+footer .text, footer .titre{
+    justify-content: center;
+    align-items: center;
+}
+
+footer .separation{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+footer .centre{
+    background-color: var(--third-color);
+}
+
+footer .centre .reseaux{
+    display: inline-flex;
+    padding: 20px;
+    column-gap: 20px;
+}
+
+footer .centre .reseaux .reseau{
+    background-color: var(--fifth-color);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+footer .centre .reseaux .reseau:hover{
+    background-color: var(--fourth-color);
+}
+
+footer .bas{
+    background-color: var(--second-color);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    
+}
+
+
+
+footer .bas a{
+    color: var(--third-color);
+}
+
+footer .bas a:hover{
+    color: var(--primary-color);
+}
+
+@media(max-width: 1000px){
+    footer .haut{
+        column-gap: 10%;
+        display: grid;
+        justify-content: center;
+    }
+    footer .info{
+        margin: 10px;
+    }
+
+    footer .separation{
+        transform: rotate(90deg);
+        position: absolute;
+        visibility: hidden;
+    }
+    footer .bas{
+        display: block;
+        column-gap: 0;
+    }
+
+}
+

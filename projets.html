@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style-projets.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Alban Mary | Projets</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navbar-gauche">
+                <a href="easter-egg.html">Alban Mary</a>
+            </div>
+            <div class="navbar-centre">
+                <div class="navbar-ligne">
+                    <a href="index.html">Accueil</a>
+                    <a href="competences.html">Compétences</a>
+                    <a href="projets.html">Projets</a>
+                </div>
+                <div class="burger">
+                    <div class="dropdown">
+                        <button class="dropbtn"><i class="fa-solid fa-bars fa-xl"></i></button>
+                        <div class="dropdown-content">
+                            <a href="index.html">Accueil</a>
+                            <a href="competences.html">Compétences</a>
+                            <a href="projets.html">Projets</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-droite">
+                <a class="droite" href="contact.php"><i class="fa-solid fa-envelope"></i>‎ Contact</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="first">
+            <img class="image" src="images/projets.webp" alt="Industrie">
+            <div class="projets-titre">Mes projets</div>
+        </section>
+        <section class="second">
+            <div class="projet">
+                <img class="image-projet" src="images/liveblockreservation.png" alt="Page d'accueil du site liveblock">
+                <div class="texte">
+                    <h2>Live Block Reservation</h2>
+                    <p>Live Block Reservation est un site web
+                        permettant de réserver des salles au
+                        sein d’un campus EPSI/WIS. Il est relié à
+                        un serveur hébergé sur un Raspberry Pi.</p>
+                    <div class="temps">Temps: 5j</div>
+                    <div id="liveblock" class="plus"><a>En savoir plus</a></div>
+                </div>
+            </div>
+            <div class="projet">
+                <img class="image-projet" src="images/labyrinthe.jpg" alt="fenêtre divisé en 2 parties avec d'un coté le labyrinthe en 2D et de l'autre en 3D">
+                <div class="texte">
+                    <h2>Labyrinthe en 3D sur Python</h2>
+                    <p>J'ai créer un labyrinthe en 3D et 2D de manière
+                        prcédure en python à partir de la bibliotherque PyQt5
+                        (module qui sert à dessiner des polygones).</p>
+                    <div class="temps">Temps: 10sem</div>
+                    <div id="labyrinthe" class="plus"><a>En savoir plus</a></div>
+                </div>
+            </div>
+        </section>
+
+        <div id="modalliveblock" class="modal liveblock">
+            <div class="modal-content">
+                <h2>Live Block Reservation</h2>
+                <div class="modal-text-img">
+                    <div class="gauche">
+                        <h3>Technologies utilisées</h3>
+                        <div class="technologies">
+                            <div class="techno">
+                                <img class="img-box" src="images/html.png" alt="html">
+                                <img class="img-box" src="images/css.png" alt="css">
+                                <img class="img-box" src="images/php.png" alt="php">
+                                <img class="img-box" src="images/sql.png" alt="sql">
+                            </div>
+                        </div>
+                        <h3>Nombre de personnes</h3>
+                        <p> 2 </p>
+                    </div>
+                    <div class="droite">
+                        <h3>Description du projet</h3>
+                        <p>Live Block Reservation est un site web
+                            permettant de réserver des salles au
+                            sein d’un campus EPSI/WIS. Il est relié à
+                            un serveur hébergé sur un Raspberry Pi.
+                            Il suffit simplement de se connecter au
+                            site et cliquer sur le nom d'
+                            une salle
+                            pour pouvoir la réserver. Quand une
+                            salle apparaît en rouge, elle est déjà
+                            occupée. Quand elle est en vert, la salle
+                            est libre et disponible. Pour l’instant, 7
+                            salles sont renseignées mais il est
+                            possible de modifier le code source
+                            pour pouvoir l’adapter à tous les
+                            campus. C’est pourquoi les fichiers sont
+                            open source. De plus, le site est
+                            responsive. Il est donc possible d'
+                            y
+                            accéder sur un ordinateur ou sur un
+                            smartphone.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <script src="js/projets.js"></script>
+        </div>
+
+        <div id="modallabyrinthe" class="modal labyrinthe">
+            <div class="modal-content">
+                <h2>Labyrinthe 3D</h2>
+                <div class="modal-text-img">
+                    <div class="gauche">
+                        <h3>Technologies utilisées</h3>
+                        <div class="technologies">
+                            <div class="techno">
+                                <img class="img-box" src="images/python.png" alt="python">
+                            </div>
+                        </div>
+                        <h3>Nombre de personnes</h3>
+                        <p> 5 </p>
+                    </div>
+                    <div class="droite">
+                        <h3>Description du projet</h3>
+                        <p>
+                            -Trouver le plus rapidement possible, à l’aide des touches de direction, la sortie d’un labyrinthe dessiné en 3 dimensions. <br>
+                            -Générer aléatoirement un labyrinthe (dans un premier temps un labyrinthe 5x5 est fourni). <br>
+                            -Tracer le labyrinthe en 2 dimensions au fur et à mesure que le joueur le parcourt. <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/projets.js"></script>
+    </main>
+    <footer> 
+        <div class="haut">
+            <div class="categorie">
+                <div class="icon">
+                    <i class="fa-solid fa-phone fa-4x"></i>
+                </div>
+                <div class="info">
+                    <div class="titre">
+                        <h2>Téléphone</h2>
+                    </div>
+                    <div class="text">
+                        <p>0750049613</p>
+                    </div>
+                </div>
+            </div>
+            <div class="separation"><i class="fa-solid fa-grip-lines-vertical fa-6x"></i></div>
+            <div class="categorie">
+                <div class="icon">
+                    <i class="fa-sharp fa-solid fa-location-dot fa-4x"></i>
+                </div>
+                <div class="info">
+                    <div class="titre">
+                        <h2>Adresse</h2>
+                    </div>
+                    <div class="text">
+                        <p>22 rue Félix Thomas, Nantes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="separation"><i class="fa-solid fa-grip-lines-vertical fa-6x"></i></div>
+            <div class="categorie">
+                <div class="icon">
+                    <i class="fa-solid fa-envelope fa-4x"></i>
+                </div>
+                <div class="info">
+                    <div class="titre">
+                        <h2>Email</h2>
+                    </div>
+                    <div class="text">
+                        <a href="contact.php"><p>contact@albanmary.fr</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="centre">
+            <div class="reseaux">
+                <a class="reseau" href="https://github.com/kidoly"><i class="fa-brands fa-github fa-2x"></i></a>
+                <a class="reseau" href="https://www.linkedin.com/in/alban-mary-600766251/"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                <a class="reseau" href="https://www.instagram.com/_alban.mary_/?hl=fr"><i class="fa-brands fa-instagram fa-2x"></i></a>
+            </div>
+        </div>
+        <div class="bas">
+            <a href="mentions-legales.html">Mentions légales</a>
+            <p>Tous droits pas réservés ©</p>
+            <a href="droit-dauteur.html">Droit d'auteur</a>
+        </div>
+    </footer>
+</body>
+</html>
